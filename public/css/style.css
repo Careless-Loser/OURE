@@ -290,6 +290,42 @@ textarea {
   }
 
   
+/*Dashboard Admin*/
+.admin-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*Admin Posts*/
+.admin-posts {
+  padding: 0;
+  margin: 0;
+}
+
+/*Admin Post Control Form*/
+.admin-post-controls form {
+  display: inline-block;
+}
+
+/*Admin Post Control Button*/
+.admin-post-controls .btn  {
+  display: inline-block;
+  background-color: var(--black);
+  color: var(--gray-light);
+  border: 0;
+  text-decoration: none;
+  font-size: .8rem;
+  padding: 4px 8px;
+  line-height: 2;
+}
+
+/*Admin Post List*/
+.admin-posts li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
 
   /*Seach Bar*/
 .searchBar {
