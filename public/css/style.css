@@ -4,7 +4,7 @@
 :root {
     --black: #000000;
     --gray: #7e7e7e;
-    --gray-light: #E4E4E4;
+    --gray-light: #e7e7e7;
     --red: #b30000;
     --font-size-base: 1rem;
     --font-size-md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
@@ -288,6 +288,40 @@ textarea {
   .pagination:hover {
     color: var(--black);
   }
+
+  
+
+  /*Seach Bar*/
+.searchBar {
+  visibility: hidden;
+  transform: translateY(-100px);
+  background-color: var(--black);
+  padding: 4px 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+/*Seach Bar Open*/
+.searchBar.open {
+  transform: translateY(0);
+  transition: transform 0.1s;
+}
+
+/*Seach Bar Input*/
+.searchBar input {
+  margin: 0;
+  border: 0;
+}
+
+/*Seach Bar Close*/
+#searchClose {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: var(--gray-light);
+  padding: 15px;
+}
 
   /*Footer*/
 .footer {
