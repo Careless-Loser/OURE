@@ -64,6 +64,57 @@ router.get('/contact', (req, res) => {
     res.render('contact', { locals });
 }); 
 
+//Posts :id
+router.get('/post/:id', async (req, res) => {
+    try {
+      let slug = req.params.id;
+  
+      const data = await Post.findById({ _id: slug });
+  
+      const locals = {
+        title: data.title
+      }
+  
+      res.render('post', { 
+        locals,
+        data,
+        currentRoute: `/post/${slug}`
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  
+  });
+
+  //Search Posts
+  router.post('/search', async (req, res) => {
+    try {
+      const locals = {
+        title: "SEARCH"
+      }
+  
+      let searchTerm = req.body.searchTerm;
+      const searchNoSpecialChar = searchTerm.replace(/[^a-zA-Z0-9 ]/g, "")
+  
+      const data = await Post.find({
+        $or: [
+          { title: { $regex: new RegExp(searchNoSpecialChar, 'i') }},
+          { body: { $regex: new RegExp(searchNoSpecialChar, 'i') }}
+        ]
+      });
+  
+      res.render("search", {
+        data,
+        locals,
+        currentRoute: '/'
+      });
+  
+    } catch (error) {
+      console.log(error);
+    }
+  
+  });
+
 module.exports = router;
 
 // Testing if the database started
