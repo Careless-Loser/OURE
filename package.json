@@ -4,10 +4,12 @@
   "description": "OURE is a personal blogging platform designed to provide users with a seamless and engaging blogging experience. Built with modern web technologies, OURE combines an elegant frontend with a robust backend to deliver a powerful blogging solution.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "app.js",
+    "dev": "nodemon app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Ifrah Imtiaz",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
