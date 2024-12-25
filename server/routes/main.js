@@ -50,7 +50,7 @@ router.get('/about', (req, res) => {
         description: "OURE is a modern blogging platform offering a seamless experience for writers and readers, built with cutting-edge web technologies."
     }
 
-    res.render('about', { locals });
+    res.render('about', {currentRoute: '/about'});
 });  
 
 //Contact Page
@@ -61,7 +61,7 @@ router.get('/contact', (req, res) => {
         description: "Get in touch with OURE! Reach out for questions, feedback, or support here to help."
     }
 
-    res.render('contact', { locals });
+    res.render('contact', {currentRoute: '/contact'});
 }); 
 
 //Posts :id
@@ -72,14 +72,11 @@ router.get('/post/:id', async (req, res) => {
       const data = await Post.findById({ _id: slug });
   
       const locals = {
-        title: data.title
+        title: data.title,
+        currentRoute: `/post/${slug}`
       }
   
-      res.render('post', { 
-        locals,
-        data,
-        currentRoute: `/post/${slug}`
-      });
+      res.render('post', { locals, data});
     } catch (error) {
       console.log(error);
     }
