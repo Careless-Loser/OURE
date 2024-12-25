@@ -1,0 +1,17 @@
+<!--Making form for adding new post-->
+<a href="/dashboard">&larr; Back</a>
+<!--Div class admin title-->
+<div class="admin-title">
+  <h2>Add New Post</h2>
+</div>
+<!--Adding post-->
+<form action="/add-post" method="POST">
+<!--Title for the post-->
+  <label for="title"><b>Title</b></label>
+  <input type="text" placeholder="Post Title" name="title">
+<!--Content for the post-->
+  <label for="body"><b>Content</b></label>
+  <textarea name="body" cols="50" rows="10"></textarea>
+<!--Submit button for post-->
+  <input type="submit" value="Add" class="btn">
+</form>
