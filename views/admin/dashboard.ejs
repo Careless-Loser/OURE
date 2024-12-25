@@ -1,0 +1,30 @@
+<!--Making Div class name as admin title-->
+<div class = "admin-title">
+    <!--Heading 2-->
+    <h2>
+        Posts
+    </h2>
+    <!--Linking add post-->
+    <a href="/add-post" class="button">+ Add New</a>
+  </div>
+  <!--List of the posts-->
+  <ul class="admin-posts">
+    <!--Fetching the posts data-->
+    <% data.forEach(post => { %>
+      <li>
+        <!--Post ID-->
+        <a href="/post/<%= post._id %>">
+          <%= post.title %> &nearr;
+        </a>
+        <!--Admin panel control-->
+        <div class="admin-post-controls">
+          <!--Edit the post-->
+          <a href="/edit-post/<%= post._id %>" class="btn">Edit</a>
+          <!--Delete the post-->
+          <form action="/delete-post/<%= post._id %>?_method=DELETE" method="POST">
+            <input type="submit" value="Delete" class="btn-delete btn">
+          </form>
+        </div>
+      </li>
+    <% }) %>
+  </ul>
