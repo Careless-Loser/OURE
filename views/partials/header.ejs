@@ -6,13 +6,13 @@
     <nav class = "header__nav">
         <ul>
             <li>
-                <a href = "/" class = "">HOME</a>
+                <a href = "/" class = "<%= isActiveRoute('/', currentRoute) %>">HOME</a>
             </li>
             <li>
-                <a href = "/about" class = "">ABOUT</a>
+                <a href = "/about" class = "<%= isActiveRoute('/about', currentRoute) %>">ABOUT</a>
             </li>
             <li>
-                <a href = "/contact" class = "">CONTACT</a>
+                <a href = "/contact" class = "<%= isActiveRoute('/contact', currentRoute) %>">CONTACT</a>
             </li>
         </ul>
     </nav>
