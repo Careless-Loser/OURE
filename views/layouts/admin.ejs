@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Using ejs = html local is title in main.ejs-->
+    <title><%= locals.title %></title>
+    <!--Using ejs = html local is description in main.ejs-->
+    <meta name = "description" content = "<%= locals.description %>">
+    <!--Linking the style sheet from public folder-->
+    <link rel = "stylesheet" href = "/css/style.css">
+    <!--Linking the java script from public folder-->
+    <script type = "text/javascript" defer src = "/js/script.js"></script>
+</head>
+<body>
+    <!--Wrapping everything in a div name as container-->
+    <div class="container">
+        <!--Made a folder partial in  views folder for admin header-->
+        <%- include('../partials/header_admin.ejs')  %>
+            <!--Main and gave class to it also named it main-->
+            <main class = "main">
+                <!--Using ejs = html body is <h1>Home</h1> in index.ejs-->
+                <%- body %>
+            </main>
+
+        <!--Made a folder partial in  views folder for saperating header and footer-->
+        <%- include('../partials/footer.ejs')  %>
+
+</div>
+
+</body>
+</html>
