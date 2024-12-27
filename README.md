@@ -2,7 +2,7 @@
 
 OURE is a personal blogging platform designed to provide users with a seamless and engaging blogging experience. Built with modern web technologies, OURE combines an elegant frontend with a robust backend to deliver a powerful blogging solution.
 
-![alt text](./readme-OURE.png?raw=true)
+![Preview](./OURE.png)
 
 ## Tech Stack
 ### *Frontend*: 
