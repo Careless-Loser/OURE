@@ -21,6 +21,5 @@ $ npm run dev
 ```
 
 ## Design Files
-The Blog layout is in a Figma(.fig) file under the "Design Files".
 
 [View Live Figma Prototype](https://www.figma.com/design/PEBEvTTIS5KzqJ7PmImS2P/OURE?node-id=1-11&m=dev&t=bHFyXdH5oIJvXMEL-1)
