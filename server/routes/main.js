@@ -16,7 +16,7 @@ router.get('', async (req, res) => {
         }
 
     //pagination
-    let perPage = 5;
+    let perPage = 10;
     let page = req.query.page || 1;
 
     const data = await Post.aggregate([{ $sort: {createdAt: -1 } }])
