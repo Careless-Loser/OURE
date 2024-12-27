@@ -1,5 +1,4 @@
 {
-  "homepage": "https://careless-loser.github.io/OURE/",
   "name": "oure",
   "version": "1.0.0",
   "description": "OURE is a personal blogging platform designed to provide users with a seamless and engaging blogging experience. Built with modern web technologies, OURE combines an elegant frontend with a robust backend to deliver a powerful blogging solution.",
@@ -7,8 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "app.js",
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d build",
     "dev": "nodemon app.js"
   },
   "keywords": [],
