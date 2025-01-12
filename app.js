@@ -11,7 +11,7 @@ const { isActiveRoute } = require('./server/helpers/routeHelpers');
 const app = express()
 app.use(cors(
     {
-        origin: {"oure-ifrahs-projects-5dd92a21.vercel.app"},
+        origin: {"oureblog.vercel.app"},
         methods: ["POST", "GET"],
         Credentials: true
     }
