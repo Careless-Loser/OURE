@@ -8,7 +8,14 @@ const MongoStore = require('connect-mongo');
 const connectDB = require('./server/config/db');
 const { isActiveRoute } = require('./server/helpers/routeHelpers');
 
-const app = express();
+const app = express()
+app.use(cors(
+    {
+        origin: {""},
+        methods: ["POST", "GET"],
+        Credentials: true
+    }
+));
 const session = require('express-session');
 const PORT = 3001 || process.env.PORT;
 
