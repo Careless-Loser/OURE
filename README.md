@@ -18,7 +18,6 @@ To install and run this project - install dependencies using npm and then start 
 ```
 $ npm install
 $ npm run dev
-go to google and paste http://localhost:3001/
 ```
 
 ## Design Files
